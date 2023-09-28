@@ -1,19 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+import { HomePage} from './pages/HomePage';
+import { Students } from './pages/Students';
+import {Courses} from './pages/Courses';
+const Menu = createDrawerNavigator()
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      
-    </View>
-  );
+export default function app(){
+  return(
+    <NavigationContainer>
+      <Menu.Navigator>
+        <Menu.Screen name='HomePage' component={HomePage}/>
+        <Menu.Screen name='Students' component={Students}/>
+        <Menu.Screen name='Courses' component={Courses}/>
+
+
+      </Menu.Navigator>
+    </NavigationContainer>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
