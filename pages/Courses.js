@@ -1,9 +1,9 @@
 import { StyleSheet,Text,View } from "react-native-web";
 
-export function Courses(){
+export function Courses({navigation}){
     return(
         <View style={styles.container}>
-            <Text>Loren impsum Students</Text>
+            <Text>Loren impsum Courses</Text>
         </View>
     )
 }

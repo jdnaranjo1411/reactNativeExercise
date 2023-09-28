@@ -1,11 +1,19 @@
-import { StyleSheet,Text,View } from "react-native-web";
+import { StyleSheet, Text, View, Button } from "react-native-web";
 
-export function HomePage(){
-    return(
-        <View style={styles.container}>
-            <Text>Loren impsum Students</Text>
-        </View>
-    )
+export default function HomePage({navigation}) {
+  return (
+    <View style={styles.container}>
+      <Text>Loren impsum HomePage</Text>
+      <Button
+        title="CoursesButtom"
+        onPress={() =>
+          navigation.navigate('Courses')
+        }
+      />
+    </View>
+  )
+
+  
 }
 
 const styles = StyleSheet.create({
