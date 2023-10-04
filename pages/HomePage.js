@@ -3,13 +3,19 @@ import { StyleSheet, Text, View, Button } from "react-native-web";
 export default function HomePage({navigation}) {
   return (
     <View style={styles.container}>
-      <Text>Loren impsum HomePage</Text>
+      <Text>HomePage</Text>
       <Button
-        title="CoursesButtom"
+        title="Courses_Buttom"
         onPress={() =>
           navigation.navigate('Courses')
         }
-      />
+        />
+
+        <Button
+        title="Students_Buttom"
+        onPress={() =>
+          navigation.navigate('Students')
+        }/>
     </View>
   )
 

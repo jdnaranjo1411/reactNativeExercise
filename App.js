@@ -5,9 +5,12 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomePage from './pages/HomePage';
 import Students from './pages/Students';
 import Courses from './pages/Courses';
+import 'react-native-gesture-handler';
+
 
 const Drawer = createDrawerNavigator();
-const Stack = createNativeStackNavigator(); // Crea un StackNavigator
+const Stack = createNativeStackNavigator();
+const Menu = createDrawerNavigator(); 
 
 
 
@@ -18,11 +21,11 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name='Home' component={HomePage} />
-        <Stack.Screen name='Courses' component={Courses} />
-        <Stack.Screen name='Students' component={Students} />
-      </Stack.Navigator>
+      <Menu.Navigator>
+        <Menu.Screen name="HomePage" component={HomePage}/>
+        <Menu.Screen name="Students" component={Students}/>
+        <Menu.Screen name="Courses" component={Courses}/>
+      </Menu.Navigator>
     </NavigationContainer>
   );
 }

@@ -1,25 +1,27 @@
 import { StyleSheet, Text, View,Button } from "react-native-web";
+import React from 'react';
 
-export default function Students({navigation}) {
+export default function StudentsScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Loren impsum HomePage</Text>
+      <Text>Students</Text>
       <Button
-        title="HomePageButtom"
-        onPress={() =>
-          navigation.navigate('HomePage')
-        }
+        title="Go to HomePage"
+        onPress={() => navigation.navigate('HomePage')}
       />
-      </View>
-)
+      <Button
+        title="Go to Courses"
+        onPress={() => navigation.navigate('Courses')}
+      />
+    </View>
+  );
 }
 
-
-      const styles = StyleSheet.create({
-        container: {
-        flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
