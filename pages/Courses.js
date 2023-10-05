@@ -5,7 +5,7 @@ import axios from "axios";
 
 export default function Courses({ navigation }) {
   
-  axios.get("http://localhost:3001/api/v1/getPersonas").then((res) => {
+  axios.get("http://localhost:3001/api/v1/getCursos").then((res) => {
     console.log(res.data);
   });
   return (

@@ -3,7 +3,7 @@ import React from 'react';
 import axios from "axios";
 
 export default function StudentsScreen({ navigation }) {
-  axios.get("http://localhost:3001/api/v1/getCursos").then((res) => {
+  axios.get("http://localhost:3001/api/v1/getPersonas").then((res) => {
     console.log(res.data);
   });
 
