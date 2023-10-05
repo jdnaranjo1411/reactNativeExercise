@@ -2,6 +2,12 @@ import { StyleSheet, Text, View,Button } from "react-native-web";
 import React from 'react';
 
 export default function StudentsScreen({ navigation }) {
+  axios.get("http://localhost:3001/api/v1/getCursos").then((res) => {
+    console.log(res.data);
+  });
+
+
+  
   return (
     <View style={styles.container}>
       <Text>Students</Text>
