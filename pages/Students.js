@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View,Button } from "react-native-web";
 import React from 'react';
+import axios from "axios";
 
 export default function StudentsScreen({ navigation }) {
   axios.get("http://localhost:3001/api/v1/getCursos").then((res) => {
@@ -7,7 +8,7 @@ export default function StudentsScreen({ navigation }) {
   });
 
 
-  
+
   return (
     <View style={styles.container}>
       <Text>Students</Text>
