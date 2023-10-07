@@ -3,7 +3,7 @@ import React from 'react';
 import axios from "axios";
 
 export default function StudentsScreen({ navigation }) {
-  axios.get("http://localhost:3002/api/v1/getPersonas").then((res) => { 
+  axios.get("http://localhost:3001/api/v1/getPersonas").then((res) => { 
     //se cambio el puerto de 3001 a 3002 para que funcione
     console.log(res.data);
   });

@@ -6,7 +6,7 @@ export default function Courses({ navigation }) {
   const [Courses, setCourses] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/api/v1/getCursos")
+    axios.get("http://localhost:3001/api/v1/getCursos")
       .then((res) => {
         setCourses(res.data);
       })
