@@ -3,7 +3,7 @@ import { View, Text, FlatList, Button, StyleSheet } from "react-native";
 import axios from "axios";
 
 export default function Courses({ navigation }) {
-  const [courses, setCourses] = useState([]);
+  const [Courses, setCourses] = useState([]);
 
   useEffect(() => {
     axios.get("http://localhost:3002/api/v1/getCursos")
@@ -19,7 +19,7 @@ export default function Courses({ navigation }) {
     <View style={styles.container}>
       <Text>Lista de Cursos</Text>
       <FlatList
-        data={courses}
+        data={Courses}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View style={styles.courseItem}>
